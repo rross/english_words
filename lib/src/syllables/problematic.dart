@@ -51,5 +51,7 @@ Map<String, int> problematic = {
   "persephone": 4,
   "phoebe": 2,
   "precious": 2,
+  "real":1,
+  "verge":1,
   "zoe": 2
 };
