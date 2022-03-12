@@ -1,4 +1,4 @@
-name: english_words_rr
+name: english_words
 description: >
   Utilities for working with English words. Counts syllables, generates
   well-sounding word combinations, and provides access to the top 5000 English
