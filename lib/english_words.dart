@@ -2,7 +2,7 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 /// Support for working with English text.
-library english_words;
+library english_words_rr;
 
 export 'src/syllables.dart';
 export 'src/word_pair.dart';
