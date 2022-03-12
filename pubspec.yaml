@@ -1,10 +1,10 @@
-name: english_words
+name: english_words_rr
 description: >
   Utilities for working with English words. Counts syllables, generates
   well-sounding word combinations, and provides access to the top 5000 English
   words by usage.
-version: 4.0.0
-homepage: https://github.com/filiph/english_words
+version: 4.0.1
+homepage: https://github.com/rross/english_words
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
