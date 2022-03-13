@@ -99,6 +99,33 @@ void main() {
       _expectSyllables(syllableTestData);
     });
   });
+
+  _testSyllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes();
+}
+
+void _testSyllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes() {
+  // for now this will only test the ending portion. The others will need to
+  // be added in the future
+  group("Excluded Syllable Count", () {
+    test('running',() {
+      expect(syllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes('running'), 1);
+    });
+    test('served',() {
+      expect(syllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes('served'), 1);
+    });
+    test('kisses',() {
+      expect(syllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes('kisses'), 1);
+    });
+    test('unemployed',() {
+      expect(syllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes('unemployed'), 3);
+    });
+    test('disguises',() {
+      expect(syllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes('disguises'), 2);
+    });
+    test('disguises',() {
+      expect(syllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes('disguises'), 2);
+    });
+  });
 }
 
 void _expectSyllables(Map<String, int> expectations) {

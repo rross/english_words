@@ -7,6 +7,8 @@ import 'package:english_words/src/syllables/problematic.dart';
 import 'package:english_words/src/syllables/trisyllabic.dart';
 import 'package:string_scanner/string_scanner.dart';
 
+// ../lib/english_words.dart
+
 final RegExp _allCaps = RegExp(r'^[A-Z]+$');
 
 final RegExp _alpha = RegExp(r"\w");
@@ -88,4 +90,19 @@ int syllables(String word) {
 
   if (count == 0) return 1;
   return count;
+}
+
+int syllablesExcludingProperNounsJargonCompoundWordsCommonSuffixes(String word) {
+  // Do not include proper nouns, familiar jargon, or compound words.
+  // Do not include common suffixes (such as -es, -ed, or -ing) as a syllable;
+  // for now we'll strip off any endings
+  String workingWord = word;
+  workingWord = workingWord.replaceAll(RegExp(r"es$"),'');
+  workingWord = workingWord.replaceAll(RegExp(r"ed$"),'');
+  workingWord = workingWord.replaceAll(RegExp(r"ing$"),'');
+
+  // print("The word $word was changed to $workingWord");
+
+  return syllables(workingWord);
+
 }
